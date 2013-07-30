@@ -19,7 +19,7 @@
 	<version>#variables.settings.version#</version>
 	<provider>#variables.settings.provider#</provider>
 	<providerURL>#variables.settings.providerURL#</providerURL>
-	<category>Utility</category>
+	<category>#variables.settings.category#</category>
 	<settings></settings>
 	<eventHandlers>
 		<eventHandler event="onApplicationLoad" component="extensions.eventHandler" persist="false" />
