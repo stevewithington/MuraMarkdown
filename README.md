@@ -18,6 +18,15 @@ You can render markdown syntax as HTML in one of two ways with this plugin:
 
 		[mura]$.renderMarkdown('This is a *simple* example')[/mura]
 
+##Example Code
+The example below is to illustrate how you might actually use this plugin in your own code using the included README.md file as a test file:
+
+	<cfscript>
+		md = FileRead(ExpandPath('README.md'));
+		html = $.renderMarkdown(md);
+		WriteOutput(html);
+	</cfscript>
+
 
 ##Resources
 * [MarkdownJ library](https://code.google.com/p/markdownj/)
