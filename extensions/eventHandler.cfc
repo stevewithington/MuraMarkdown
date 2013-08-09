@@ -14,11 +14,10 @@ component accessors=true extends='mura.plugin.pluginGenericEventHandler' output=
 	include '../plugin/settings.cfm';
 
 	public any function onApplicationLoad(required struct $) {
-		var class = 'com.petebevin.markdown.MarkdownProcessor';
-		var lib = '/MuraMarkdown/extensions/lib/markdownj.jar'; // need to explicitly include the .jar file for Railo
+		var paths = [ExpandPath('/#variables.settings.package#/extensions/lib/markdownj.jar')];
+		var javaLoader = new mura.javaloader.JavaLoader(paths);
+		variables.pluginConfig.getApplication().markdown = javaLoader.create('com.petebevin.markdown.MarkdownProcessor');
 		variables.pluginConfig.addEventHandler(this);
-		arguments.$.globalConfig('javaSettingsLoadPaths', ListAppend(arguments.$.globalConfig('javaSettingsLoadPaths'), lib));
-		variables.pluginConfig.getApplication().markdown = CreateObject('java', class).init();
 		set$(arguments.$);
 	}
 

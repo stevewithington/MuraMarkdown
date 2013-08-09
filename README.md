@@ -38,7 +38,7 @@ The example below is to illustrate how you might actually use this plugin in you
 * Railo **4+**
 
 ##Tested With
-* Mura CMS Core Version 6.0+
+* Mura CMS Core Version 6.1+
 * Adobe ColdFusion 10.0.9
 * Railo 4.0.4
 
