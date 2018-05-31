@@ -2,7 +2,7 @@
 
 This [Mura CMS](http://getmura.com) plugin uses the [MarkdownJ library](https://code.google.com/p/markdownj/). MarkdownJ is pure Java port of Markdown (a text-to-html conversion tool written by John Gruber).
 
-##Instructions
+## Instructions
 
 You can render markdown syntax as HTML in one of two ways with this plugin:
 
